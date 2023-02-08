@@ -4,29 +4,33 @@ import { EnvelopeSimple, Phone } from "phosphor-react";
 
 function AboutMe() {
   return (
-    <section id='sobre' className='w-full flex align-center justify-around text-white gap-12 p-5'>
-      <img className='sm:w-44 sm:h-56 md:w-72 md:h-80' src={curriculumPhoto} alt="personal photo" />
-      <div className='max-w-6xl flex flex-col gap-6'>
-        <h1 className='text-5xl'>Kelvyn Lenis Martins de Morais</h1>
-        <p className='max-w-4xl'>
+    <section id='sobre' className='w-screen flex flex-col items-center text-white gap-2 lg:flex-row xl:px-16'>
+      <img className='w-56 sm:w-72 lg:ml-6 xl:w-80' src={curriculumPhoto} alt="personal photo" />
+      <div className='w-screen flex flex-col items-center gap-6 lg:items-start lg:pl-2 xl:px-24'>
+        <h1 className='text-xl sm:text-4xl lg:self-center lg:text-5xl'>Kelvyn Lenis Martins de Morais</h1>
+        <p className='text-[12px] pl-2 break-normal flex sm:text-lg sm:w-[700px]'>
           Estudante do curso de graduação Ciência da computação na Universidade Federal da Paraíba(UFPB). 
           Conhecimento em desenvolvimento de software. Perfil dinâmico e proativo, 
-          com foco no aprendizado constante, a fim de contribuir para o alcance das metas
+          com foco no aprendizado constante, a fim de contribuir para o alcance das metas.
         </p>
-        <div className='flex flex-col'>
-          <h3 className='text-3xl'>Informações para contato</h3>
-          <span className='text-lg'>Email</span>
-          <span className='text-sm text-zinc-200 px-6 py-1 flex flex-row gap-2'>
-            <a href='mailto:kmartinslenis30@hotmail.com'>
-              <EnvelopeSimple size={24} />
-            </a>
-            kmartinslenis30@hotmail.com
-          </span>
-          <span className='text-lg'>Telefone celular</span>
-          <span className='text-sm text-zinc-200 px-6 py-1 flex flex-row gap-2'>
-            <Phone size={24} />
-            (83) 9 9983-3926
-          </span>
+        <div className='flex flex-col self-start'>
+          <h1 className='text-xl lg:text-2xl'>Informações para contato</h1>
+          <div className='pl-5 lg:pl-0'>
+            <span className='text-md'>Email</span>
+            <span className='text-sm text-zinc-200 px-6 py-1 flex flex-row gap-2'>
+              <a href='mailto:kmartinslenis30@hotmail.com'>
+                <EnvelopeSimple size={24} />
+              </a>
+              kmartinslenis30@hotmail.com
+            </span>
+          </div>
+          <span className='text-md'>Telefone celular</span>
+          <div className='pl-5'>
+            <span className='text-sm text-zinc-200 px-6 py-1 flex flex-row gap-2 lg:px-0'>
+              <Phone size={24} />
+              (83) 9 9983-3926
+            </span>
+          </div>
         </div>
       </div>
     </section>

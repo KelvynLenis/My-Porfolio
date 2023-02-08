@@ -3,7 +3,7 @@ import personalLogo from '/K.svg';
 
 function Footer() {
   return (
-    <div className='h-14 flex items-center justify-center text-zinc-300 gap-2'>
+    <footer className='w-full h-14 flex items-center justify-center text-zinc-300 gap-2 text-[12px] md:text-lg md:gap-4 lg:text-2xl'>
       Proudly created by <span className='text-sky-200'>@KelvynLenis</span>
       
       <a href="#">
@@ -15,7 +15,7 @@ function Footer() {
       <a href="https://github.com/KelvynLenis" title='open in new tab' target='_blank'>
         <BsGithub size={24} />
       </a>
-    </div>
+    </footer>
   )
 }
 

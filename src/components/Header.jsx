@@ -1,7 +1,7 @@
 import * as Menubar from '@radix-ui/react-menubar';
 import personalLogo from '/K.svg';
 
-export default function NavBar() {
+export default function Header() {
 
   function handleDownload() {
     fetch('CV.pdf').then(response => {
@@ -16,10 +16,10 @@ export default function NavBar() {
   }
 
   return (
-    <header className='w-full h-14 bg-black text-white flex items-center justify-between p-4'>
+    <header className='w-screen h-14 bg-black text-white flex items-center justify-between p-4 text-[10px]'>
       <div>
         <a href="#">
-          <img src={personalLogo} alt="K Logo" />
+          <img src={personalLogo} alt="K Logo" className='w-3 sm:w-5 md:visible' />
         </a>
       </div>
       <div>
