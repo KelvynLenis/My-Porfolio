@@ -7,7 +7,7 @@ import { projects } from '../utils/projects';
 
 function Projects() {
   return (
-    <section id="projects" className='w-screen h-full flex flex-col items-center gap-5'>
+    <section id="projects" className='w-full h-full flex flex-col items-center gap-5'>
       <h1 className='text-white text-4xl'>Projects</h1>
       <div className='w-full flex flex-wrap justify-center gap-12 text-white'>
         {projects.map((project, index) => {

@@ -16,10 +16,10 @@ export default function Header() {
   }
 
   return (
-    <header className='w-screen h-14 bg-black text-white flex items-center justify-between p-4 text-[10px]'>
-      <div>
+    <header className="w-full h-14 bg-[url('assets/img/banner-bg.png')] bg-black text-white flex items-center justify-center sm:justify-between p-4 text-[10px] md:text-sm lg:text-xl">
+      <div className='hidden sm:block'>
         <a href="#">
-          <img src={personalLogo} alt="K Logo" className='w-3 sm:w-5 md:visible' />
+          <img src={personalLogo} alt="K Logo" className='w-3 sm:w-5 md:w-6 lg:w-8' />
         </a>
       </div>
       <div>

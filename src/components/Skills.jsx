@@ -7,7 +7,7 @@ function Skills() {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   return (
-    <section id="skills" className='w-screen flex flex-col items-center py-8 bg-zinc-900 bg-opacity-80'>
+    <section id="skills" className='w-full flex flex-col items-center py-8 bg-zinc-900 bg-opacity-80'>
       <h1 className='text-4xl text-white p-2 lg:text-5xl'>Skills</h1>
       <div className='flex flex-wrap justify-center gap-4 p-6 text-white text-lg lg:text-xl'>
         <div className='flex flex-col items-center mx-5'>

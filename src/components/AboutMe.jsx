@@ -1,10 +1,10 @@
 import React from 'react'
-import curriculumPhoto from '../assets/img/curriculo.jpg';
+import curriculumPhoto from '../assets/img/curriculo4.png';
 import { EnvelopeSimple, Phone } from "phosphor-react";
 
 function AboutMe() {
   return (
-    <section id='sobre' className='w-screen flex flex-col items-center text-white gap-2 lg:flex-row xl:px-16'>
+    <section id='sobre' className="w-full flex flex-col items-center text-white gap-2 lg:flex-row xl:px-16">
       <img className='w-56 sm:w-72 lg:ml-6 xl:w-80' src={curriculumPhoto} alt="personal photo" />
       <div className='w-screen flex flex-col items-center gap-6 lg:items-start lg:pl-2 xl:px-24'>
         <h1 className='text-xl sm:text-4xl lg:self-center lg:text-5xl'>Kelvyn Lenis Martins de Morais</h1>

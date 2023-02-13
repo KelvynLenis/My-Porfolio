@@ -8,7 +8,7 @@ import Skills from "./components/Skills"
 function App() {
 
   return (
-    <div className="w-screen h-full bg-slate-900 flex flex-col gap-12">
+    <div className="w-full h-full bg-slate-900 flex flex-col gap-12">
       <Header />
       <AboutMe />
       <Skills />
