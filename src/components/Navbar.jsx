@@ -15,8 +15,10 @@ export default function Header() {
   })
   }
 
+  // bg-[url('assets/img/banner-bg.png')]
+
   return (
-    <header className="w-full h-14 bg-[url('assets/img/banner-bg.png')] bg-black text-white flex items-center justify-center sm:justify-between p-4 text-[10px] md:text-sm lg:text-xl">
+    <nav className="w-full h-14 bg-[url('assets/img/banner-bg.png')] bg-black text-white flex items-center justify-center fixed z-20 sm:px-16 sm:justify-between text-[10px] md:text-[22px] lg:text-[30px]">
       <div className='hidden sm:block'>
         <a href="#">
           <img src={personalLogo} alt="K Logo" className='w-3 sm:w-5 md:w-6 lg:w-8' />
@@ -60,6 +62,6 @@ export default function Header() {
           </Menubar.Menu>  
         </Menubar.Root>
       </div>
-    </header>
+    </nav>
   )
 }

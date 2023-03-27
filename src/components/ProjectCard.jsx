@@ -1,16 +1,57 @@
+import { motion } from 'framer-motion';
+import {Tilt} from 'react-tilt';
+import { fadeIn, textVariant } from '../utils/motion';
+import { FaGithub } from 'react-icons/fa';
 
-function ProjectCard({ title, image, description, link }) {
-  const prefix = 'img-url'
+
+function ProjectCard({ index, title, description, tags=['#project'], image, source_code_link }) {
+  const prefix = 'img-url';
+
   return (
-    <a href={link} className='w-72 h-auto' target='_blank'>
-      <h3 className="text-yellow-300">{title}</h3>
-      <div className="w-full h-80 flex flex-col items-center justify-center">
-        {image.map((_, index) => (
-          <img className="w-full h-full hover:opacity-50" src={image[index]} key={`${prefix}+${index}`} />
-        ))}
-      </div>
-      <p className="max-w-[355px] xl:text-lg">{description}</p>
-    </a>
+    <motion.div
+      variants={fadeIn("up", "spring", 0.5 * index, 0.75)}
+    >
+      <Tilt
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450
+        }}
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+      >
+        <div className='relative w-full h-[230px]'>
+          <img 
+            src={image}
+            alt={title}
+            className='w-full h-full object-cover rounded-2xl'
+          />
+
+          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <FaGithub 
+                size={28}
+                alt='github'
+                className=' object-contain bg-black rounded-full'
+              />              
+            </div>
+          </div>
+        </div>
+
+        <div className='mt-5'>
+          <h3 className='text-white font-bold text-[24px]'>{title}</h3>
+          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        </div>
+
+        {/* <div className='mt-4 flex flex-wrap gap-2'>
+          {tags.map((tag) => (
+            <p key={tag.name} className={`text-[14px] ${tag.color}`}> #{tag.name}</p>
+          ))}
+        </div> */}
+      </Tilt>
+    </motion.div>
   )
 }
 

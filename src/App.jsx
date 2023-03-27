@@ -1,6 +1,6 @@
 import AboutMe from "./components/AboutMe"
 import Footer from "./components/Footer"
-import Header from "./components/Header"
+import Navbar from "./components/Navbar"
 import Papers from "./components/Papers"
 import Projects from "./components/Projects"
 import Skills from "./components/Skills"
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="w-full h-full bg-slate-900 flex flex-col gap-12">
-      <Header />
+      <Navbar />
       <AboutMe />
       <Skills />
       <Projects />

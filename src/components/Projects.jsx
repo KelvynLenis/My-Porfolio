@@ -1,9 +1,7 @@
 import React from 'react'
 import ProjectCard from './ProjectCard';
-import ProjectImg from '../assets/img/project-img1.png';
 
 import { projects } from '../utils/projects';
-
 
 function Projects() {
   return (
@@ -14,10 +12,11 @@ function Projects() {
           return (
             <ProjectCard
               key={index}
-              title={project.title}
-              image={project.imgURL}
+              index={index} 
+              title={project.title} 
               description={project.description}
-              link={project.link}
+              image={project.imgURL}
+              source_code_link={project.link}
             />
           )
         })}
