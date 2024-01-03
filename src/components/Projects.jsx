@@ -14,6 +14,7 @@ function Projects() {
               key={index}
               index={index} 
               title={project.title} 
+              tags={project.tags}
               description={project.description}
               image={project.imgURL}
               source_code_link={project.link}

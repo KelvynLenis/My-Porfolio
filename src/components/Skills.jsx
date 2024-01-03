@@ -53,11 +53,11 @@ function Skills() {
     <section id="skills" className='w-full flex flex-col items-center py-8 bg-primary bg-opacity-80'>
       <h1 className='text-4xl text-white p-2 lg:text-5xl'>Techs</h1>
       <div className='flex flex-wrap justify-center gap-4 p-6 text-white text-lg lg:text-xl'>
-        <ServiceCard index={1} title="Python" Icon={FaPython}/>
         <ServiceCard index={1} title="JavaScript" Icon={IoLogoJavascript} />
         <ServiceCard index={1} title="ReactJS" Icon={FaReact} />
         <ServiceCard index={1} title="NodeJS" Icon={FaNodeJs} />
-        <ServiceCard index={1} title="Java" Icon={FaJava} />
+        {/* <ServiceCard index={1} title="Python" Icon={FaPython}/> */}
+        {/* <ServiceCard index={1} title="Java" Icon={FaJava} /> */}
 {/*         
         <div className='flex flex-col items-center mx-5'>
           <FaPython size={ windowSize[0] < 1024 ? 26 : 75 } color='rgb(42,109,250)' />

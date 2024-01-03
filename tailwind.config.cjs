@@ -14,6 +14,11 @@ module.exports = {
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
       },
+      dropShadow: {
+        'img': '0 2px 20px #aaa6c3',
+        'primary': '0 1.5px 6px #aaa6c3',
+        'primary': '0 1px 5px #aaa6c3',
+      },
       screens: {
         xs: "450px",
       },
