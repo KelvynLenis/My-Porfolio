@@ -21,7 +21,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link 
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       > */}
       <div
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-card black-gradient'
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-card border border-zinc-600 black-gradient'
       >
         <div className='relative w-full h-[230px]'>
           <img 
@@ -51,7 +51,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link 
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}> #{tag.name}</p>
+            <p key={tag.name} className={`text-[14px] text-white font-bold`}> #{tag}</p>
           ))}
         </div>
       {/* </Tilt> */}

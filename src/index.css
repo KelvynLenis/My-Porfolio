@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+.font-outline-1 {
+  -webkit-text-stroke: 0.60px #f700ff;
+}
+
 .black-gradient {
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(

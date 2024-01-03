@@ -17,7 +17,8 @@ module.exports = {
       dropShadow: {
         'img': '0 2px 20px #aaa6c3',
         'primary': '0 1.5px 6px #aaa6c3',
-        'primary': '0 1px 5px #aaa6c3',
+        'secondary': '0 1px 5px #aaa6c3',
+        'text': '0px 1px 10px #fff',
       },
       screens: {
         xs: "450px",
