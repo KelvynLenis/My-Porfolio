@@ -45,7 +45,10 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
                 />              
               </button>
               {live_link &&  (
-                <button className='cursor-pointer violet-gradient rounded-lg p-0.5 hover:drop-shadow-primary'>
+                <button 
+                  onClick={() => window.open(live_link, "_blank")}
+                  className='cursor-pointer violet-gradient rounded-lg p-0.5 hover:drop-shadow-primary'
+                >
                   <IoEnterOutline 
                     size={28} 
                     alt='open project' 

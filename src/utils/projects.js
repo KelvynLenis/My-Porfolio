@@ -17,9 +17,9 @@ export const projects = [
   {
     title: 'E-commerce website',
     imgURL: ['https://user-images.githubusercontent.com/52057929/216837020-fa5ffc32-c075-47db-b4f5-fc3ec9cdb2bd.png'],
-    description: 'Fullstack website using ReactJS, Next and Sanity.',
+    description: 'Fullstack website for e-commerce using ReactJS, Next and Sanity.',
     link: 'https://github.com/KelvynLenis/e-commerce-reactjs',
-    "tags": ["React", 'JavaScript']
+    "tags": ["React", 'Next', 'Sanity']
   },
   {
     title: 'RealState App',
