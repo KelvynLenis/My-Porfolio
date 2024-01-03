@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 // import {Tilt} from 'react-tilt';
 import { fadeIn, textVariant } from '../utils/motion';
 import { FaGithub } from 'react-icons/fa';
+import { IoEnterOutline } from "react-icons/io5";
 
 
-function ProjectCard({ index, title, description, tags, image, source_code_link }) {
+function ProjectCard({ index, title, description, tags, image, source_code_link, live_link }) {
   const prefix = 'img-url';
 
   return (
@@ -31,15 +32,27 @@ function ProjectCard({ index, title, description, tags, image, source_code_link 
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <FaGithub 
-                size={28}
-                alt='github'
-                className=' object-contain bg-black rounded-full'
-              />              
+            <div className='flex flex-col items-center gap-2'>
+              <button
+                onClick={() => window.open(source_code_link, "_blank")}
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:drop-shadow-primary'
+              >
+                <FaGithub 
+                  size={28}
+                  alt='source code on github'
+                  className='object-contain bg-black rounded-full'
+                  title='source code'
+                />              
+              </button>
+              {live_link &&  (
+                <button className='cursor-pointer violet-gradient rounded-lg p-0.5 hover:drop-shadow-primary'>
+                  <IoEnterOutline 
+                    size={28} 
+                    alt='open project' 
+                    title='open project'   
+                  />
+                </button>
+              )}
             </div>
           </div>
         </div>
