@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.hide-scroll-bar::-webkit-scrollbar {
+  width: 0rem;
+}
+
+.hide-scroll-bar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.hide-scroll-bar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
 
 .font-outline-1 {
   -webkit-text-stroke: 0.60px #f700ff;

@@ -64,7 +64,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{title}</h3>
-          <p className='mt-2 text-white text-[14px]'>{description}</p>
+          <p className='h-20 overflow-scroll hide-scroll-bar mt-2 text-white text-[14px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
