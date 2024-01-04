@@ -33,6 +33,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div className='flex flex-col items-center gap-2'>
+            {source_code_link && (
               <button
                 onClick={() => window.open(source_code_link, "_blank")}
                 className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:drop-shadow-primary'
@@ -44,6 +45,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
                   title='source code'
                 />              
               </button>
+            )}
               {website_link &&  (
                 <button 
                   onClick={() => window.open(website_link, "_blank")}
