@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import { IoEnterOutline } from "react-icons/io5";
 
 
-function ProjectCard({ index, title, description, tags, image, source_code_link, live_link }) {
+function ProjectCard({ index, title, description, tags, image, source_code_link, website_link }) {
   const prefix = 'img-url';
 
   return (
@@ -44,9 +44,9 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
                   title='source code'
                 />              
               </button>
-              {live_link &&  (
+              {website_link &&  (
                 <button 
-                  onClick={() => window.open(live_link, "_blank")}
+                  onClick={() => window.open(website_link, "_blank")}
                   className='cursor-pointer violet-gradient rounded-lg p-0.5 hover:drop-shadow-primary'
                 >
                   <IoEnterOutline 
