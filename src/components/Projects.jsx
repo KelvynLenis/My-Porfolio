@@ -1,21 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ProjectCard from './ProjectCard';
 
-// import { projects } from '../utils/projects';
-import { api } from '../libs/api';
-
+import { projects } from '../utils/projects';
 function Projects() {
-  const [projects, setProjects] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    api.get('/projects')
-      .then(res => {
-        setProjects(res.data)
-      })
-      .catch(err => console.log(err))
-      .finally(() => setIsLoading(false))
-  }, [])
 
   return (
     <section id="projects" className='w-full h-full flex flex-col items-center gap-5'>
