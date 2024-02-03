@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
 
 import { IoLogoJavascript } from 'react-icons/io';
-import { FaNodeJs, FaPython, FaReact, FaJava } from 'react-icons/fa';
+import { FaNodeJs , FaReact, FaJava } from 'react-icons/fa';
+import { TbBrandNextjs } from "react-icons/tb";
 import * as Progress from '@radix-ui/react-progress';
 import { useRef } from 'react';
 
@@ -32,12 +33,10 @@ const ServiceCard = ({ index, title, Icon, style='none' }) => {
           }}
           className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[288px] flex justify-evenly items-center flex-col'
         > 
-          <Icon  alt={title}
+          <Icon alt={title}
             className={`w-16 h-16 object-contain bg-gradient-to-tr from-blue-400 via-blue-300 to-blue-400 rounded-full p-2`}
           />
-          <h3
-            className='text-white text-[20px] font-bold text-center'
-          >
+          <h3 className='text-white text-[20px] font-bold text-center'>
             {title}
           </h3>
         </div>
@@ -56,9 +55,9 @@ function Skills() {
         <ServiceCard index={1} title="JavaScript" Icon={IoLogoJavascript} />
         <ServiceCard index={1} title="ReactJS" Icon={FaReact} />
         <ServiceCard index={1} title="NodeJS" Icon={FaNodeJs} />
-        {/* <ServiceCard index={1} title="Python" Icon={FaPython}/> */}
+        <ServiceCard index={1} title="NextJS" Icon={TbBrandNextjs }/>
         {/* <ServiceCard index={1} title="Java" Icon={FaJava} /> */}
-{/*         
+      {/*         
         <div className='flex flex-col items-center mx-5'>
           <FaPython size={ windowSize[0] < 1024 ? 26 : 75 } color='rgb(42,109,250)' />
           <span>Python</span>
