@@ -11,14 +11,15 @@ import { fadeIn, textVariant } from '../utils/motion';
 
 
 const styles = {
-  "JavaScript": "bg-gradient-to-tr from-yellow-400 via-zinc-300 to-yellow-400",
-  "Python": "bg-gradient-to-tr from-blue-400 via-yellow-300 to-blue-400",
-  "ReactJS": "bg-gradient-to-tr from-blue-400 via-blue-300 to-blue-400",
-  "NodeJS": "bg-gradient-to-tr from-green-400 via-green-300 to-green-400",
-  "Java": "bg-gradient-to-tr from-red-400 via-zinc-300 to-red-400"
+  "JavaScript": "w-16 h-16 object-contain rounded-full text-yellow-500 p-2 bg-gradient-to-tr from-zinc-900 via-zinc-700 to-zinc-900",
+  "Python": "w-16 h-16 object-contain rounded-full p-2 bg-gradient-to-tr from-blue-400 via-yellow-300 to-blue-400",
+  "ReactJS": "w-16 h-16 object-contain rounded-full p-2 bg-gradient-to-tr from-blue-500 via-blue-300 to-blue-500",
+  "NodeJS": "w-16 h-16 object-contain rounded-full p-2 bg-gradient-to-tr from-green-700 via-green-400 to-green-700",
+  "Java": "w-16 h-16 object-contain rounded-full p-2 bg-gradient-to-tr from-red-400 via-zinc-300 to-red-400",
+  "NextJS": "w-16 h-16 object-contain rounded-full p-2 bg-gradient-to-tr from-black via-zinc-600 to-black"
 }
 
-const ServiceCard = ({ index, title, Icon, style='none' }) => {
+const ServiceCard = ({ index, title, Icon, style }) => {
   return (
     <Tilt className='xs:w-[250px] w-full'>
       <motion.div
@@ -34,7 +35,7 @@ const ServiceCard = ({ index, title, Icon, style='none' }) => {
           className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[288px] flex justify-evenly items-center flex-col'
         > 
           <Icon alt={title}
-            className={`w-16 h-16 object-contain bg-gradient-to-tr from-blue-400 via-blue-300 to-blue-400 rounded-full p-2`}
+            className={style ? styles[style] : 'w-16 h-16 object-contain rounded-full p-2 bg-gradient-to-tr from-blue-400 via-blue-300 to-blue-400 '}
           />
           <h3 className='text-white text-[20px] font-bold text-center'>
             {title}
@@ -52,10 +53,10 @@ function Skills() {
     <section id="skills" className='w-full flex flex-col items-center py-8 bg-primary bg-opacity-80'>
       <h1 className='text-4xl text-white p-2 lg:text-5xl'>Techs</h1>
       <div className='flex flex-wrap justify-center gap-4 p-6 text-white text-lg lg:text-xl'>
-        <ServiceCard index={1} title="JavaScript" Icon={IoLogoJavascript} />
-        <ServiceCard index={1} title="ReactJS" Icon={FaReact} />
-        <ServiceCard index={1} title="NodeJS" Icon={FaNodeJs} />
-        <ServiceCard index={1} title="NextJS" Icon={TbBrandNextjs }/>
+        <ServiceCard index={1} title="JavaScript" Icon={IoLogoJavascript} style='JavaScript' />
+        <ServiceCard index={1} title="ReactJS" Icon={FaReact} style='ReactJS' />
+        <ServiceCard index={1} title="NodeJS" Icon={FaNodeJs} style='NodeJS' />
+        <ServiceCard index={1} title="NextJS" Icon={TbBrandNextjs } style='NextJS' />
         {/* <ServiceCard index={1} title="Java" Icon={FaJava} /> */}
       {/*         
         <div className='flex flex-col items-center mx-5'>
