@@ -1,9 +1,8 @@
+import React from 'react'
 import * as Menubar from '@radix-ui/react-menubar';
-import personalLogo from '/K.svg';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
-
+function Sidebar() {
   function handleDownload() {
     fetch('CV.pdf').then(response => {
       response.blob().then(blob => {
@@ -16,17 +15,9 @@ export default function Header() {
     })
   }
 
-  // bg-[url('assets/img/banner-bg.png')]
-
   return (
-    <nav className="w-screen h-14 bg-[url('assets/img/banner-bg.png')] bg-black text-white items-center hidden justify-evenly lg:flex text-[30px]">
-      <div className='hidden sm:block'>
-        <a href="#">
-          <img src={personalLogo} alt="K Logo" className='w-3 sm:w-5 md:w-6 lg:w-8 hover:drop-shadow-primary' />
-        </a>
-      </div>
-      <div className=''>
-        <Menubar.Root className='flex gap-5'>
+    <div className="lg:hidden">
+      <Menubar.Root className='flex gap-5'>
           <Menubar.Menu>
             <Menubar.Trigger className='hover:drop-shadow-primary'>
               <Link to={'/'}>
@@ -36,33 +27,34 @@ export default function Header() {
           </Menubar.Menu>
           <Menubar.Menu>
             <Menubar.Trigger className='hover:drop-shadow-primary'>
-              <Link to={'/skills'}>
+              <Link to={'/'}>
                 Skills
               </Link>
             </Menubar.Trigger>
           </Menubar.Menu>
           <Menubar.Menu>
             <Menubar.Trigger className='hover:drop-shadow-primary'>
-              <Link to={'/projects'}>
+              <Link to={'/'}>
                 Projects
               </Link>
             </Menubar.Trigger>
           </Menubar.Menu>
           <Menubar.Menu>
             <Menubar.Trigger className='hover:drop-shadow-primary'>
-              <Link to={'/papers'}>
+              <Link to={'/'}>
                 Papers
               </Link>
             </Menubar.Trigger>
           </Menubar.Menu>  
           
           <Menubar.Menu>
-            <Menubar.Trigger className='w-72 text-blue-200 bg-primary px-2 font-bold rounded-md hover:drop-shadow-primary' onClick={handleDownload}>
+            <Menubar.Trigger className='text-blue-200 bg-primary px-2 font-bold rounded-md hover:drop-shadow-primary' onClick={handleDownload}>
               Download My CV
             </Menubar.Trigger>
           </Menubar.Menu>  
         </Menubar.Root>
-      </div>
-    </nav>
+    </div>
   )
 }
+
+export default Sidebar

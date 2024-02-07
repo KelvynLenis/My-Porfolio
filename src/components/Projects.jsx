@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import ProjectCard from './ProjectCard';
 
-import { projects } from '../utils/projects';
+import { projects } from '../database/projects';
+
+
 function Projects() {
   const [page, setPage] = useState(1);
 
@@ -15,7 +17,7 @@ function Projects() {
   }
 
   return (
-    <section id="projects" className='w-full h-full flex flex-col items-center gap-5'>
+    <section className='w-full h-fit flex self-center flex-col items-center gap-5 px-10'>
       <h1 className='flex flex-column text-white text-4xl gap-4'>Projects</h1>
       <div className='w-full h-[950px] flex flex-wrap justify-center gap-12 text-white'>
         {

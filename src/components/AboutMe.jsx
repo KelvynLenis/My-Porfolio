@@ -5,17 +5,16 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 function AboutMe() {
   return (
-    <section id='sobre' className="w-full flex flex-col items-center text-white gap-2 lg:flex-row xl:px-16 mt-20">
+    <section className="w-screen flex flex-col items-center justify-evenly text-white gap-2 lg:flex-row ">
       <img className='w-56 sm:w-72 lg:ml-6 xl:w-80 rounded-full hover:drop-shadow-img' src={curriculumPhoto} alt="personal photo" />
-      <div className='w-screen flex flex-col items-center gap-6 lg:items-start lg:pl-2 xl:px-24'>
+      <div className='w-fit flex flex-col items-center gap-6 lg:items-start lg:pl-2'>
         <div className='flex flex-col gap-2 text-xl sm:text-4xl lg:text-4xl'>
           <h1>Kelvyn Lenis Martins de Morais</h1>
           <h2 className='text-blue-200 drop-shadow-text'>Desenvolvedor Frontend</h2>
         </div>
         <p className='text-[12px] pl-2 break-normal flex sm:text-lg sm:w-[700px]'>
-          Estudante do curso de graduação Ciência da computação na Universidade Federal da Paraíba(UFPB). 
-          Conhecimento em desenvolvimento de software. Perfil dinâmico e proativo, 
-          com foco no aprendizado constante, a fim de contribuir para o alcance das metas.
+          Graduado em Ciência da computação na Universidade Federal da Paraíba(UFPB) e apaixonado por desenvolvimento de software. 
+          Entusiasta de frontend utilizand React, Next.js e TailwindCSS.
         </p>
       
         <div className='flex flex-col self-start max-[640px]:pl-3'>
@@ -25,7 +24,7 @@ function AboutMe() {
               <a className='hover:drop-shadow-primary' href='mailto:kmartinslenis30@hotmail.com'>
                 <EnvelopeSimple size={24} />
               </a>
-              <span className='text-md'>Email: kmartinslenis30@hotmail.com</span>
+              <span className='text-md'>Email: kmartins.dev@gmail.com</span>
             </span>
           </div>
           {/* <div className='pl-0'>

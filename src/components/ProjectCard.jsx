@@ -9,10 +9,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
   const prefix = 'img-url';
 
   return (
-    <motion.div
-      variants={fadeIn("up", "spring", 0.5 * index, 0.75)}
-      className='hover:drop-shadow-primary'
-    >
+    <motion.div variants={fadeIn("up", "spring", 0.5 * index, 0.75)} className='rounded-2xl hover:ring-2 hover:ring-violet-400'>
       {/* <Tilt
         options={{
           max: 45,
@@ -21,9 +18,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       > */}
-      <div
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-card border border-zinc-600 black-gradient'
-      >
+      <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-card border border-zinc-600 black-gradient'>
         <div className='relative w-full h-[230px]'>
           <img 
             src={image}
@@ -34,10 +29,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div className='flex flex-col items-center gap-2'>
             {source_code_link && (
-              <button
-                onClick={() => window.open(source_code_link, "_blank")}
-                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:drop-shadow-primary'
-              >
+              <button onClick={() => window.open(source_code_link, "_blank")} className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:drop-shadow-primary hover:ring-2 hover:ring-violet-400'>
                 <FaGithub 
                   size={28}
                   alt='source code on github'
@@ -47,10 +39,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
               </button>
             )}
               {website_link &&  (
-                <button 
-                  onClick={() => window.open(website_link, "_blank")}
-                  className='cursor-pointer violet-gradient rounded-lg p-0.5 hover:drop-shadow-primary'
-                >
+                <button onClick={() => window.open(website_link, "_blank")} className='cursor-pointer violet-gradient rounded-lg p-0.5 hover:drop-shadow-primary hover:ring-2 hover:ring-violet-400'>
                   <IoEnterOutline 
                     size={28} 
                     alt='open project' 

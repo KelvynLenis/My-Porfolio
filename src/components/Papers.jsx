@@ -1,4 +1,4 @@
-import { papers } from "../utils/projects";
+import { papers } from "../database/projects";
 import PaperCard from "./PaperCard";
 
 function Papers() {

@@ -112,6 +112,21 @@ export const projects = [
 			"Tailwind"
 		],
 		"website_url": "https://lp-prev.vercel.app/"
+	},
+	{
+		"id": "",
+		"title": "Evently",
+		"img_url": "https://github.com/KelvynLenis/evently/assets/52057929/fb5c95fd-5e25-49fb-abde-83bfec042ee8",
+		"description": "Platform for hosting and managing events wih Google login. Developed with NextJS, MongoDB, Shadcn, Uploadthing and Clerk.",
+		"source_code": "https://github.com/KelvynLenis/evently",
+		"tags": [
+			"NextJs",
+			"MongoDB",
+			"Shadcn",
+			"Uploadthing",
+			"Clerk"
+		],
+		"website_url": "https://evently-eosin-chi.vercel.app/"
 	}
 ]
 
