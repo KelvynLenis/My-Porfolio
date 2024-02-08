@@ -1,9 +1,8 @@
-// ThemeProvider.js
 import React, { createContext, useReducer, useContext, useEffect } from 'react';
 
 // Define initial state and reducer
 const initialState = {
-  theme: 'light',
+  theme: localStorage.getItem('theme') || 'light',
 };
 
 const themeReducer = (state, action) => {
@@ -12,6 +11,11 @@ const themeReducer = (state, action) => {
       return {
         ...state,
         theme: state.theme === 'light' ? 'dark' : 'light',
+      };
+    case 'SET_THEME':
+      return {
+        ...state,
+        theme: action.payload,
       };
     default:
       return state;
@@ -25,18 +29,19 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, initialState);
 
-   // Read the theme from local storage on mount
-   useEffect(() => {
+  // Read the theme from local storage on mount
+  useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
       dispatch({ type: 'SET_THEME', payload: storedTheme });
     }
   }, []);
-
+  
   // Update local storage when the theme changes
   useEffect(() => {
     localStorage.setItem('theme', state.theme);
   }, [state.theme]);
+  
 
   return (
     <ThemeContext.Provider value={{ state, dispatch }}>
