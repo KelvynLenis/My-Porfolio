@@ -63,7 +63,7 @@ export const projects = [
 		"id": "c53555f5-3907-469f-b2f5-1d207c9adb36",
 		"title": "Let's Play",
 		"img_url": "https://github.com/matheusces/lets-play/assets/52057929/003440bc-6214-4687-a6a0-d654fb333134",
-		"description": "Plataforma web para convidar amigos para uma jogatina. Com ela você pode criar salas com definição de horários e jogo, além de criar e gerenciar ligas e torneios! 🏆",
+		"description": "Plataforma web para gerenciar partidas, ligas e torneios de jogos. Com ela você pode criar salas com definição de horários e jogo, além de criar e gerenciar ligas e torneios! 🏆",
 		"source_code": "https://github.com/matheusces/lets-play/tree/main",
 		"tags": [
 			"React",

@@ -56,10 +56,10 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
 
         <div className='mt-5'>
           <h3 className='font-bold text-[24px]'>{title}</h3>
-          <p className='h-20 overflow-scroll hide-scroll-bar mt-2 text-[14px]'>{description}</p>
+          <p className='h-20 w-[] overflow-hidden hide-scroll-bar mt-2 text-[14px] text-ellipsis'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-4 h-10 flex flex-wrap gap-2 text-wrap text-ellipsis'>
           {tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] font-bold`}> #{tag}</p>
           ))}

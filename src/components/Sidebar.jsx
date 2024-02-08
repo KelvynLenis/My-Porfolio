@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 import * as Menubar from '@radix-ui/react-menubar';
 import { Link, useNavigate } from 'react-router-dom';
+import SwitchTheme from './SwitchTheme';
+import { useTheme } from '../Context/ThemeContext';
 
 function Sidebar() {
+  const [selectedPage, setSelectedPage ] = useState(window.location.pathname)
   const [isOpen, setIsOpen] = useState(false)
+
   const navigate = useNavigate();
+  const { state } = useTheme();
   
   function handleDownload() {
     fetch('CV.pdf').then(response => {
@@ -20,6 +25,7 @@ function Sidebar() {
 
   function redirectTo(url) {
     // alert("clicked")
+    setSelectedPage(url);
     toggleSidebar();
     navigate(url);
 
@@ -56,31 +62,37 @@ function Sidebar() {
               </Menubar.Trigger>
             </Menubar.Menu>
               <Menubar.Menu>
-                <Menubar.Trigger className='text-xl font-medium  hover:drop-shadow-primary' onClick={() => redirectTo('/')}>
+                <Menubar.Trigger aria-checked={selectedPage === '/'} className={`text-xl font-medium hover:drop-shadow-light ${state.theme === 'light' ? 'aria-checked:text-sky-400 aria-checked:drop-shadow-blue' : 'aria-checked:text-red-400 aria-checked:drop-shadow-red'} `} onClick={() => redirectTo('/')}>
                   Sobre
                 </Menubar.Trigger>
               </Menubar.Menu>
               <Menubar.Menu>
-                <Menubar.Trigger className='text-xl font-medium  hover:drop-shadow-primary' onClick={() => redirectTo('/skills')}>
+                <Menubar.Trigger aria-checked={selectedPage === '/skills'} className={`text-xl font-medium hover:drop-shadow-light ${state.theme === 'light' ? 'aria-checked:text-sky-400 aria-checked:drop-shadow-blue' : 'aria-checked:text-red-400 aria-checked:drop-shadow-red'} `} onClick={() => redirectTo('/skills')}>
                   Skills
                 </Menubar.Trigger>
               </Menubar.Menu>
               <Menubar.Menu>
-                <Menubar.Trigger className='text-xl font-medium  hover:drop-shadow-primary' onClick={() => redirectTo('/projects')}>
+                <Menubar.Trigger aria-checked={selectedPage === '/projects'} className={`text-xl font-medium hover:drop-shadow-light ${state.theme === 'light' ? 'aria-checked:text-sky-400 aria-checked:drop-shadow-blue' : 'aria-checked:text-red-400 aria-checked:drop-shadow-red'} `} onClick={() => redirectTo('/projects')}>
                   Projects
                 </Menubar.Trigger>
               </Menubar.Menu>
               <Menubar.Menu>
-                <Menubar.Trigger className='text-xl font-medium  hover:drop-shadow-primary' onClick={() => redirectTo('/papers')}>
+                <Menubar.Trigger aria-checked={selectedPage === '/papers'} className={`text-xl font-medium hover:drop-shadow-light ${state.theme === 'light' ? 'aria-checked:text-sky-400 aria-checked:drop-shadow-blue' : 'aria-checked:text-red-400 aria-checked:drop-shadow-red'} `} onClick={() => redirectTo('/papers')}>
                   Papers
                 </Menubar.Trigger>
               </Menubar.Menu>  
               
               <Menubar.Menu>
-                <Menubar.Trigger className='w-8/12 text-blue-200 text-xl bg-primary px-2 py-1 font-bold self-center rounded-md hover:drop-shadow-primary' onClick={handleDownload}>
-                  Download My CV
+                <Menubar.Trigger className={`w-1/2 self-center text-lg font-medium px-2 py-3 rounded-md ${state.theme === 'light' ? 'text-sky-500 hover:drop-shadow-blue' : 'text-red-300 hover:drop-shadow-red'}`} onClick={handleDownload}>
+                  Baixar Currículo
                 </Menubar.Trigger>
               </Menubar.Menu>  
+
+              <Menubar.Menu>
+                <div className='flex self-center'>
+                  <SwitchTheme />
+                </div>
+              </Menubar.Menu>
             </Menubar.Root>
             <div className='absolute w-screen h-screen inset-0 bg-black/60 z-10' onClick={toggleSidebar}  />
           </>

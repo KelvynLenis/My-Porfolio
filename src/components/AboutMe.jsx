@@ -24,22 +24,23 @@ function AboutMe() {
           <h1 className='text-xl lg:text-2xl'>Informações para contato</h1>
           <div className='pl-3 lg:pl-0'>
             <span className={`text-sm ${state.theme  === 'light' ? 'text-zinc-900' : 'text-zinc-200' } py-1 flex flex-row gap-2`}>
-              <a className='hover:drop-shadow-primary' href='mailto:kmartinslenis30@hotmail.com'>
-                <EnvelopeSimple size={24} />
+              <EnvelopeSimple size={24} />
+              <span className='text-md'>Email: </span>
+              <a className={`${state.theme === 'light' ? 'text-blue-600 hover:text-blue-400' : 'text-blue-400 hover:text-blue-300'} `} href='mailto:kmartinslenis30@hotmail.com' target='_blank'>
+                 kmartins.dev@gmail.com
               </a>
-              <span className='text-md'>Email: kmartins.dev@gmail.com</span>
             </span>
           </div>
           <div className='pl-0'>
             <span className={`text-sm ${state.theme === 'light' ? 'text-zinc-900' : 'text-zinc-200'}  px-3 py-1 flex flex-row gap-2 lg:px-0`}>
               <FaGithub size={24} />
-              <span className='text-md sm:pl-5 md:pl-0'>Github: <a className={`${state.theme === 'light' ? 'text-blue-600 hover:text-blue-400' : 'text-blue-400 hover:text-blue-300'} `} href="https://github.com/KelvynLenis">https://github.com/KelvynLenis</a></span>
+              <span className='text-md sm:pl-5 md:pl-0'>Github: <a className={`${state.theme === 'light' ? 'text-blue-600 hover:text-blue-400' : 'text-blue-400 hover:text-blue-300'} `} href="https://github.com/KelvynLenis" target='_blank'>https://github.com/KelvynLenis</a></span>
             </span>
           </div>
-          <div className='pl-0'>
+          <div className='pl-3'>
             <span className={`text-sm ${state.theme  === 'light' ? 'text-zinc-900' : 'text-zinc-200' } py-1 flex flex-row gap-2`}>
               <FaLinkedin size={24} />
-              <span className='text-md sm:pl-5 md:pl-0'>LinkedIn: <a className={`${state.theme === 'light' ? 'text-blue-600 hover:text-blue-400' : 'text-blue-400 hover:text-blue-300'} `} href="https://www.linkedin.com/in/kelvyn-lenis-martins-2188301ab/">https://www.linkedin.com/in/kelvyn-lenis-martins-2188301ab/</a></span>
+              <span className='flex flex-col md:flex-row text-md sm:pl-5 md:pl-0'>LinkedIn: <a className={`w-44 md:w-fit text-ellipsis overflow-hidden ${state.theme === 'light' ? 'text-blue-600 hover:text-blue-400' : 'text-blue-400 hover:text-blue-300'} `} href="https://www.linkedin.com/in/kelvyn-lenis-martins-2188301ab/" target='_blank'>https://www.linkedin.com/in/kelvyn-lenis-martins-de-morais-2188301ab/</a></span>
             </span>
           </div>
         </div>
