@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* scroll bar */
+
 .hide-scroll-bar::-webkit-scrollbar {
   width: 0rem;
 }
@@ -14,9 +16,17 @@
   background-color: transparent;
 }
 
+/* outline */
+
 .font-outline-1 {
   -webkit-text-stroke: 0.60px #f700ff;
 }
+
+.font-outline-black {
+  -webkit-text-stroke: 0.60px black;
+}
+
+/* gradients */
 
 .black-gradient {
   background: #000000; /* fallback for old browsers */
@@ -29,6 +39,20 @@
     to right,
     #434343,
     #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.blue-gradient {
+  background: #6A9ED6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ADD8E6,
+    #6A9ED6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ADD8E6,
+    #6A9ED6
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -58,8 +82,73 @@
   -webkit-text-fill-color: transparent;
 }
 
+.blue-red-gradient {
+  background: rgb(0, 174, 255);
+  background: linear-gradient(90.13deg, rgb(0, 174, 255) 1.9%, rgb(220 38 38) 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, rgb(0, 174, 255) 1.9%, rgb(220 38 38) 97.5%);
+}
+
 .green-pink-gradient {
   background: "#00cea8";
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+/* Image pulsing */
+
+@keyframes pulseShadowBlue {
+  0%, 100% {
+      box-shadow: 0 1px 5px rgb(125 211 252);
+  }
+  50% {
+      box-shadow: 0 1px 50px rgb(125 211 252);
+  }
+}
+
+@keyframes pulseShadowRed {
+  0%, 100% {
+      box-shadow: 0 1px 5px #aaa6c3;
+  }
+  50% {
+      box-shadow: 0 1px 50px rgb(220 38 38);
+  }
+}
+
+.animate-pulse-shadow-light {
+  animation: pulseShadowBlue 3s infinite;
+}
+
+.animate-pulse-shadow-dark {
+  animation: pulseShadowRed 3s infinite;
+}
+
+
+/* Side bar animation */
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(100%);
+  }
+}
+
+.sidebar-in {
+  transform: translateX(-100%);
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.sidebar-out {
+  transform: translateX(-100%);
+  animation: slideOut 0.3s ease-out forwards;
 }

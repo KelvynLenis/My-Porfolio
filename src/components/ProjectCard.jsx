@@ -3,13 +3,16 @@ import { motion } from 'framer-motion';
 import { fadeIn, textVariant } from '../utils/motion';
 import { FaGithub } from 'react-icons/fa';
 import { IoEnterOutline } from "react-icons/io5";
+import { useTheme } from '../Context/ThemeContext';
 
 
 function ProjectCard({ index, title, description, tags, image, source_code_link, website_link }) {
-  const prefix = 'img-url';
+  const { state } = useTheme()
 
+  const prefix = 'img-url';
+  
   return (
-    <motion.div variants={fadeIn("up", "spring", 0.5 * index, 0.75)} className='rounded-2xl hover:ring-2 hover:ring-violet-400'>
+    <motion.div variants={fadeIn("up", "spring", 0.5 * index, 0.75)} className={`rounded-2xl hover:ring-2 ${state.theme === 'light' ? 'hover:ring-black text-sky-100 font-bold' : 'hover:ring-red-400 text-white'}`}>
       {/* <Tilt
         options={{
           max: 45,
@@ -18,12 +21,12 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
         }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       > */}
-      <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full shadow-card border border-zinc-600 black-gradient'>
+      <div className={` p-5 rounded-2xl sm:w-[360px] w-full ${state.theme === 'light' ? 'shadow-light bg-[#6A9ED6]' : 'shadow-card black-gradient'} border border-zinc-600`}>
         <div className='relative w-full h-[230px]'>
           <img 
             src={image}
             alt={title}
-            className='w-full h-full object-cover rounded-2xl'
+            className='w-full h-full object-cover rounded-2xl font-black'
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -33,7 +36,7 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
                 <FaGithub 
                   size={28}
                   alt='source code on github'
-                  className='object-contain bg-black rounded-full'
+                  className='object-contain bg-black rounded-full text-white'
                   title='source code'
                 />              
               </button>
@@ -52,13 +55,13 @@ function ProjectCard({ index, title, description, tags, image, source_code_link,
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{title}</h3>
-          <p className='h-20 overflow-scroll hide-scroll-bar mt-2 text-white text-[14px]'>{description}</p>
+          <h3 className='font-bold text-[24px]'>{title}</h3>
+          <p className='h-20 overflow-scroll hide-scroll-bar mt-2 text-[14px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] text-white font-bold`}> #{tag}</p>
+            <p key={tag.name} className={`text-[14px] font-bold`}> #{tag}</p>
           ))}
         </div>
       {/* </Tilt> */}

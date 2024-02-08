@@ -8,6 +8,7 @@ import * as Progress from '@radix-ui/react-progress';
 import { useRef } from 'react';
 
 import { fadeIn, textVariant } from '../utils/motion';
+import { useTheme } from '../Context/ThemeContext';
 
 
 const styles = {
@@ -20,9 +21,10 @@ const styles = {
 }
 
 const SkillCard = ({ index, title, Icon, style, progress }) => {
+
   return (
     <Tilt className='xs:w-[250px] w-full'>
-      <motion.div variants={fadeIn("right", "spring", 0.5 * index, 0.75)} className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
+      <motion.div variants={fadeIn("right", "spring", 0.5 * index, 0.75)} className='w-full blue-red-gradient p-[1px] rounded-[20px] shadow-card text-white'>
         <div
           options={{
             max: 45,
@@ -32,7 +34,7 @@ const SkillCard = ({ index, title, Icon, style, progress }) => {
           className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[288px] flex justify-evenly items-center flex-col'
         > 
           <Icon alt={title} className={style ? styles[style] : 'w-16 h-16 object-contain rounded-full p-2 bg-gradient-to-tr from-blue-400 via-blue-300 to-blue-400 '} />
-          <h3 className='text-white text-[20px] font-bold text-center'>
+          <h3 className='text-[20px] font-bold text-center text-white'>
             {title}
           </h3>
 
@@ -47,14 +49,14 @@ const SkillCard = ({ index, title, Icon, style, progress }) => {
 
 function Skills() {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const { state } = useTheme()
 
   return (
     <section className='w-full flex flex-col items-center py-8 gap-5'>
       
       <div className='flex flex-col items-center'>
-        <h1 className='text-3xl text-white p-2 lg:text-4xl'>Habilidades e competências <span className='text-violet-400 hover:drop-shadow-primary'>primárias</span></h1>
-          {/* <h2 className='text-4xl text-white p-2 lg:text-5xl'>Principais</h2> */}
-        <div className='flex flex-wrap justify-center gap-4 p-6 text-white text-lg lg:text-xl'>
+        <h1 className='text-3xl  p-2 lg:text-4xl'>Habilidades e competências <span className={`${state.theme === 'light' ? 'text-sky-400 hover:drop-shadow-blue' : 'text-red-400 drop-shadow-red'} hover:drop-shadow-primary`}>primárias</span></h1>
+        <div className='flex flex-wrap justify-center gap-4 p-6  text-lg lg:text-xl'>
           <SkillCard index={1} title="JavaScript" Icon={IoLogoJavascript} style='JavaScript' progress={85} />
           <SkillCard index={1} title="ReactJS" Icon={FaReact} style='ReactJS' progress={85} />
           <SkillCard index={1} title="NodeJS" Icon={FaNodeJs} style='NodeJS' progress={60} />
@@ -64,7 +66,7 @@ function Skills() {
 
 
       {/* <div className='flex flex-col items-center gap-5'>
-        <h2 className='text-2xl text-white p-2 lg:text-3xl'><span className='text-violet-400 hover:drop-shadow-primary'>Secundárias</span></h2>
+        <h2 className='text-2xl p-2 lg:text-3xl'><span className='text-violet-400 hover:drop-shadow-primary'>Secundárias</span></h2>
         <div className='grid grid-cols-3 gap-5'>
           <SkillCard index={1} title="PHP" Icon={IoLogoJavascript} style='JavaScript' progress={85} />
           <SkillCard index={1} title="SQL" Icon={FaReact} style='ReactJS' progress={85} />
