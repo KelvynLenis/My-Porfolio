@@ -23,7 +23,7 @@ function Projects() {
       <h1 className='flex flex-column text-4xl gap-4'>Projects</h1>
       <div className='w-full h-full flex flex-wrap justify-center gap-12'>
         {
-          projects.map((project, index) => {
+          projects.reverse().map((project, index) => {
 
           if(index >= (page - 1) * 6 && index <= (page * 6) - 1){
             return (

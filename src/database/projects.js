@@ -127,6 +127,18 @@ export const projects = [
 			"Clerk"
 		],
 		"website_url": "https://evently-eosin-chi.vercel.app/"
+	},
+	{
+		"id": "",
+		"title": "Expert Note",
+		"img_url": "https://github.com/KelvynLenis/evently/assets/52057929/fb5c95fd-5e25-49fb-abde-83bfec042ee8",
+		"description": "Web application to save notes by writing or speaking.",
+		"source_code": "https://github.com/KelvynLenis/evently",
+		"tags": [
+			"ReactJS",
+			"Tailwind",
+		],
+		"website_url": "https://evently-eosin-chi.vercel.app/"
 	}
 ]
 
