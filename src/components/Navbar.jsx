@@ -63,7 +63,7 @@ export default function Header() {
           
           <Menubar.Menu>
             <Menubar.Trigger className={`w-72  px-2 py-3 font-bold rounded-md ${state.theme === 'light' ? 'text-sky-500 hover:drop-shadow-blue' : 'text-red-300 hover:drop-shadow-red'}`} onClick={handleDownload}>
-              baixar currículo
+              Baixar Currículo
             </Menubar.Trigger>
           </Menubar.Menu>
 

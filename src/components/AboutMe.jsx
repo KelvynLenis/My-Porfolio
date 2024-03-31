@@ -13,11 +13,11 @@ function AboutMe() {
       <div className='w-fit flex flex-col items-center gap-6 lg:items-start lg:pl-2'>
         <div className='flex flex-col gap-2 text-xl sm:text-4xl lg:text-4xl p-3 lg:w-2/3'>
           <h1>Olá! Me chamo <span className={`${ state.theme === 'light' ? 'text-sky-600' : 'text-red-500 drop-shadow-primary'} drop-shadow-blue`}>Kelvyn Lenis Martins de Morais</span> e sou</h1>
-          <h2 className={`${ state.theme === 'light' ? 'text-sky-600' : 'text-red-500 drop-shadow-primary'} z-0 drop-shadow-blue`}>Desenvolvedor Frontend</h2>
+          <h2 className={`${ state.theme === 'light' ? 'text-sky-600' : 'text-red-500 drop-shadow-primary'} z-0 drop-shadow-blue`}>Desenvolvedor Full Stack</h2>
         </div>
         <p className='text-lg text-justify px-3 break-normal flex sm:text-lg sm:w-[700px]'>
-          Graduado em Ciência da computação na Universidade Federal da Paraíba(UFPB) e apaixonado por desenvolvimento de software. 
-          Entusiasta de frontend utilizand React, Next.js e TailwindCSS.
+          Graduado em Ciência da computação na Universidade Federal da Paraíba(UFPB) e apaixonado por engenharia de software. 
+          Entusiasta de frontend utilizand React, NextJS e NodeJS.
         </p>
       
         <div className='flex flex-col self-start max-[640px]:pl-3'>
@@ -37,7 +37,7 @@ function AboutMe() {
               <span className='text-md sm:pl-5 md:pl-0'>Github: <a className={`${state.theme === 'light' ? 'text-blue-600 hover:text-blue-400' : 'text-blue-400 hover:text-blue-300'} `} href="https://github.com/KelvynLenis" target='_blank'>https://github.com/KelvynLenis</a></span>
             </span>
           </div>
-          <div className='pl-3'>
+          <div className='pl-3 lg:pl-0'>
             <span className={`text-sm ${state.theme  === 'light' ? 'text-zinc-900' : 'text-zinc-200' } py-1 flex flex-row gap-2`}>
               <FaLinkedin size={24} />
               <span className='flex flex-col md:flex-row text-md sm:pl-5 md:pl-0'>LinkedIn: <a className={`w-44 md:w-fit text-ellipsis overflow-hidden ${state.theme === 'light' ? 'text-blue-600 hover:text-blue-400' : 'text-blue-400 hover:text-blue-300'} `} href="https://www.linkedin.com/in/kelvyn-lenis-martins-2188301ab/" target='_blank'>https://www.linkedin.com/in/kelvyn-lenis-martins-de-morais-2188301ab/</a></span>
