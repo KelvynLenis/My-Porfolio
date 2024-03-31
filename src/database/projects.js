@@ -108,13 +108,14 @@ export const projects = [
 		"tags": [
 			"React",
 			"MongoDB",
+			"Firebase",
 			"NodeJS",
 			"Tailwind"
 		],
 		"website_url": "https://lp-prev.vercel.app/"
 	},
 	{
-		"id": "",
+		"id": "evently",
 		"title": "Evently",
 		"img_url": "https://github.com/KelvynLenis/evently/assets/52057929/fb5c95fd-5e25-49fb-abde-83bfec042ee8",
 		"description": "Platform for hosting and managing events wih Google login. Developed with NextJS, MongoDB, Shadcn, Uploadthing and Clerk.",
@@ -129,7 +130,7 @@ export const projects = [
 		"website_url": "https://evently-eosin-chi.vercel.app/"
 	},
 	{
-		"id": "",
+		"id": "expnote",
 		"title": "Expert Note",
 		"img_url": "https://github.com/KelvynLenis/evently/assets/52057929/fb5c95fd-5e25-49fb-abde-83bfec042ee8",
 		"description": "Web application to save notes by writing or speaking.",
@@ -139,6 +140,21 @@ export const projects = [
 			"Tailwind",
 		],
 		"website_url": "https://evently-eosin-chi.vercel.app/"
+	},
+	{
+		"id": "edulipe",
+		"title": "EduLipe",
+		"img_url": "https://i.imgur.com/uUlmWf1.jpg",
+		"description": "APP for looking up words in sign language based on location and subject.",
+		"source_code": "",
+		"tags": [
+			"React Native",
+			"NodeJS",
+			"MongoDB",
+			"Firebase",
+			"Tailwind",
+		],
+		"website_url": ""
 	}
 ]
 
