@@ -166,7 +166,7 @@ export const projects = [
 		"source_code": "",
 		"tags": [
 			"NextJs",
-			"ShadcnUI"
+			"ShadcnUI",
 			"Firebase",
 			"Tailwind",
 			"Zustand",
