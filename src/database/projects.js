@@ -163,10 +163,10 @@ export const projects = [
 		"title": "Dropbox Clone",
 		"img_url": "https://private-user-images.githubusercontent.com/52057929/320228396-f7d1e252-d6e8-4868-bcfa-d7950cda01b2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI0MzAxNDIsIm5iZiI6MTcxMjQyOTg0MiwicGF0aCI6Ii81MjA1NzkyOS8zMjAyMjgzOTYtZjdkMWUyNTItZDZlOC00ODY4LWJjZmEtZDc5NTBjZGEwMWIyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDA2VDE4NTcyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI3NThlNDA0YTk5NTU0OWVjNWM3YzM3OTJlMzQ2MDY5MGU3ZWU1NDBiOTkwNGJjZTE2ODg2MmY0MmNkOTM1MDQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.JnZpyf2651-pAHgHtP49rGjI7qZ2apsxM1Kz7lJUNw8",
 		"description": "Clone of Dropbox ui using NextJS with upload to Firebase",
-		"source_code": "",
+		"source_code": "https://github.com/KelvynLenis/dropbox-nextjs",
 		"tags": [
 			"NextJs",
-			"ShadcnUI",-
+			"ShadcnUI",
 			"Firebase",
 			"Tailwind",
 			"Zustand",
