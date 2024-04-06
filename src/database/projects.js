@@ -132,14 +132,16 @@ export const projects = [
 	{
 		"id": "expnote",
 		"title": "Expert Note",
-		"img_url": "https://github.com/KelvynLenis/evently/assets/52057929/fb5c95fd-5e25-49fb-abde-83bfec042ee8",
+		"img_url": "https://private-user-images.githubusercontent.com/52057929/305675883-bbbbd479-866d-43d9-be7d-9d2bc6579659.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI0Mjk5NzIsIm5iZiI6MTcxMjQyOTY3MiwicGF0aCI6Ii81MjA1NzkyOS8zMDU2NzU4ODMtYmJiYmQ0NzktODY2ZC00M2Q5LWJlN2QtOWQyYmM2NTc5NjU5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDA2VDE4NTQzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUwY2IzMTBkYWRjNTIwN2ZiNzQzMTkxYjRjYTNiOWJkYTgyOWY5ZTdkOTY4Y2ZkMDVmNjcxYmI3Mjg3NTlmZTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.QisYT01fonTxiJXe1OFg0z3kbbw05UVFaPxNg2O9p_s",
 		"description": "Web application to save notes by writing or speaking.",
 		"source_code": "https://github.com/KelvynLenis/evently",
 		"tags": [
 			"ReactJS",
 			"Tailwind",
+			"TypeScript",
+			"RadixUI"
 		],
-		"website_url": "https://evently-eosin-chi.vercel.app/"
+		"website_url": ""
 	},
 	{
 		"id": "edulipe",
@@ -155,6 +157,22 @@ export const projects = [
 			"Tailwind",
 		],
 		"website_url": ""
+	},
+	{
+		"id": "Dropbox Clone",
+		"title": "Dropbox Clone",
+		"img_url": "https://private-user-images.githubusercontent.com/52057929/320228396-f7d1e252-d6e8-4868-bcfa-d7950cda01b2.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI0MzAxNDIsIm5iZiI6MTcxMjQyOTg0MiwicGF0aCI6Ii81MjA1NzkyOS8zMjAyMjgzOTYtZjdkMWUyNTItZDZlOC00ODY4LWJjZmEtZDc5NTBjZGEwMWIyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDA2VDE4NTcyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTI3NThlNDA0YTk5NTU0OWVjNWM3YzM3OTJlMzQ2MDY5MGU3ZWU1NDBiOTkwNGJjZTE2ODg2MmY0MmNkOTM1MDQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.JnZpyf2651-pAHgHtP49rGjI7qZ2apsxM1Kz7lJUNw8",
+		"description": "Clone of Dropbox ui using NextJS with upload to Firebase",
+		"source_code": "",
+		"tags": [
+			"NextJs",
+			"ShadcnUI"
+			"Firebase",
+			"Tailwind",
+			"Zustand",
+
+		],
+		"website_url": "https://dropbox-nextjs-one.vercel.app/"
 	}
 ]
 
