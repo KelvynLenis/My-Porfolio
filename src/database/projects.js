@@ -132,7 +132,7 @@ export const projects = [
 	{
 		"id": "expnote",
 		"title": "Expert Note",
-		"img_url": "https://private-user-images.githubusercontent.com/52057929/305675883-bbbbd479-866d-43d9-be7d-9d2bc6579659.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI0Mjk5NzIsIm5iZiI6MTcxMjQyOTY3MiwicGF0aCI6Ii81MjA1NzkyOS8zMDU2NzU4ODMtYmJiYmQ0NzktODY2ZC00M2Q5LWJlN2QtOWQyYmM2NTc5NjU5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDA2VDE4NTQzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUwY2IzMTBkYWRjNTIwN2ZiNzQzMTkxYjRjYTNiOWJkYTgyOWY5ZTdkOTY4Y2ZkMDVmNjcxYmI3Mjg3NTlmZTQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.QisYT01fonTxiJXe1OFg0z3kbbw05UVFaPxNg2O9p_s",
+		"img_url": "https://private-user-images.githubusercontent.com/52057929/305675883-bbbbd479-866d-43d9-be7d-9d2bc6579659.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTI0MzA0NDYsIm5iZiI6MTcxMjQzMDE0NiwicGF0aCI6Ii81MjA1NzkyOS8zMDU2NzU4ODMtYmJiYmQ0NzktODY2ZC00M2Q5LWJlN2QtOWQyYmM2NTc5NjU5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA0MDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNDA2VDE5MDIyNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc1ZWQwMjNjMGFjZjg0MmI3OGUyOTcwODRiYmMyOWMwYzgzZGNmNDQxNWM4MjRmYTY2NWUzNDM3ZmM0OTdiODEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.i7TVT2Ew6O8hmtd2XAGlErkpmd4iyetQiUWveGh4EpY",
 		"description": "Web application to save notes by writing or speaking.",
 		"source_code": "https://github.com/KelvynLenis/evently",
 		"tags": [
@@ -166,7 +166,7 @@ export const projects = [
 		"source_code": "",
 		"tags": [
 			"NextJs",
-			"ShadcnUI",
+			"ShadcnUI",-
 			"Firebase",
 			"Tailwind",
 			"Zustand",
